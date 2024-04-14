@@ -1,0 +1,19 @@
+<!-- <p>odd-length-words-component works!</p> -->
+
+ <div>
+        @if ((!input) || (input.length % 2 == 0 )) {
+    <span class="text-dark">No odd length words</span>
+        }@else if (input.length % 2 != 0) {
+            <span class=" p-2 text-truncate text-danger ">
+                {{input}}
+            </span>
+
+            @for (item of list2; track item) {
+
+                <ul class = "list-unstyled">
+                    <li>{{item.name}}</li>
+                </ul>
+        }
+    }
+        
+    </div>
